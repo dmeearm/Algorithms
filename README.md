@@ -1,4 +1,6 @@
 Algorithms
 ==========
 
-Algorithms collection
+Algorithms collection:
+
+those codes include many algorithms, use "C" language.
