@@ -19,20 +19,18 @@ bintree_t *bintree_search(bintree_t *root, int key)
     
 }
 
-/*
-  find the minsize node of right subtree
-*/
+/* find the minsize node of the right subtree */
 static bintree_t  *bintree_successor(bintree_t **root)
 {
     bintree_t  *node = NULL;
 
-    // currect node is empty(actually it's a right subtree)
+    /* currect node is empty(actually it's a right subtree) */
     node = *root;
     if (!node) {
         return NULL;
     }
 
-    // the node have not left subtree
+    /* the node have not left subtree */
     if (!node->left) {
         *root = node->right;
         return node;
@@ -98,9 +96,7 @@ void bintree_insert(bintree_t *root, bintree_t *node)
     return;
 }
 
-/* 
- * recursive algorithm for preorder, inorder and postorder search.
- */
+/* recursive algorithm for preorder, inorder and postorder search. */
 void bintree_preorder(bintree_t *root)
 {
     if (root == NULL) {
@@ -136,7 +132,6 @@ void bintree_postorder(bintree_t *root)
 
 
 /* no-recursive algorithm for tree type search */
-
 void preorder(bintree_t *root)
 {
     tnode_t      stack[MAX_SIZE];

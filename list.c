@@ -4,14 +4,6 @@
 #include <errno.h>
 #include "struct.h"
 
-/*
- * todo:
- * 1. 链表排序
- * 2. 链表翻转(逆序)
- * 3. 链表的合并 
- */
-
-
 /* build single list from file */ 
 int list_create(const char *file, list_t **root)
 {
@@ -54,7 +46,7 @@ int list_create(const char *file, list_t **root)
 	return OK;
 }
 
-/* 打印链表中的元素 */
+/* output the elements of list */
 int list_show(list_t *head)
 {
 	list_t *pl;
@@ -81,7 +73,7 @@ int list_show(list_t *head)
 }
 
 
-/* 直接插入排序法 */
+/* insertion sort */
 void list_sort1(list_t **head, int flag)
 {
 	list_t *pcur;
@@ -153,7 +145,7 @@ void list_reverse(list_t **head)
     *head = prev;
 }
 
-/* 链表合并 */
+/* meger list */
 list_t *list_merge(list_t *head1, list_t *head2)
 {
     list_t *new_list = NULL;
