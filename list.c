@@ -12,7 +12,7 @@
  */
 
 
-/* 从文件file数据构造单链表 */ 
+/* build single list from file */ 
 int list_create(const char *file, list_t **root)
 {
 	int     data;
