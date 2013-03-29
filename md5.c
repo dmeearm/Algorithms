@@ -43,10 +43,10 @@ int main(int argc, char **argv)
     if (rv != 0) {
         return -1;
     }
-	/* 
-	 * if have only one string, we can use "MD5" to calculate:
+    /* 
+     * if have only one string, we can use "MD5" to calculate:
      * MD5((unsigned char *)argv[1], strlen(argv[1]), rawMD5);
-	 */
+     */
     for (i = 0; i < 16; i++) {
         hexMD5[2 * i] = xtoc[rawMD5[i] >> 4];
         hexMD5[2 * i + 1] = xtoc[rawMD5[i] & 0xf];
