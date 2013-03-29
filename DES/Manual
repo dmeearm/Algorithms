@@ -1,0 +1,15 @@
+DES encode and decode tools
+
+1. run "Makefile"
+
+2. you can get two execute file: "des_encrypt" that is for encode and    
+   "des_decrypt" used for decode.
+
+3. if you want to encode a plain text, run "./des_encrypt" with two   
+   arguments: the secret key and plain text that would be encode.
+   eg: ./des_encrypt 12345678 plaintext
+
+4. if you want to decrypt a ciphertext. it should do the same thing like 
+   "des_encrypt", but the second argument is ciphertext of the two arguments
+
+   Good Luck!
