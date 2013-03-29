@@ -54,7 +54,7 @@ int hex2byte(unsigned char *s, int len, unsigned char *dst)
 
 int main(int argc, char **argv)
 {
-	char            key[8];
+    char            key[8];
     unsigned char   result[8];
     unsigned char   recoverd[513];
     int             len;
@@ -63,16 +63,16 @@ int main(int argc, char **argv)
     unsigned char  *res;
     int             rv = 0;
 
-	gl_des_ctx context;
+    gl_des_ctx context;
 
     if (argc != 3) {
 	    printf("it's need two arguments: key and ciphertext\n");
-		return 0;
+	    return 0;
 	}
     
-	if (strlen(argv[1]) > 8) {
-	    printf("the key must less than eight characters\n");
-		return 0;
+    if (strlen(argv[1]) > 8) {
+        printf("the key must less than eight characters\n");
+        return 0;
 	}
 
     len = strlen(argv[2]);
@@ -87,7 +87,7 @@ int main(int argc, char **argv)
     
     gl_des_setkey(&context, (const char *)key);
 
-	memset(recoverd, 0, sizeof(recoverd));
+    memset(recoverd, 0, sizeof(recoverd));
 
     p = (unsigned char *)(argv[2]);
     res = recoverd;
@@ -101,14 +101,13 @@ int main(int argc, char **argv)
             return 0;
         }
 
-        
         rv = gl_des_ecb_decrypt(&context, (const char *)result, (char *)res);
 
         res += rv;
         p += 16;
     }
     
-	printf("the plain text is: %s\n", recoverd);
+    printf("the plain text is: %s\n", recoverd);
 
     return 0;
 }
