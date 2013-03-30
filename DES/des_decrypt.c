@@ -66,14 +66,14 @@ int main(int argc, char **argv)
     gl_des_ctx context;
 
     if (argc != 3) {
-	    printf("it's need two arguments: key and ciphertext\n");
-	    return 0;
-	}
+        printf("it's need two arguments: key and ciphertext\n");
+        return 0;
+    }
     
     if (strlen(argv[1]) > 8) {
         printf("the key must less than eight characters\n");
         return 0;
-	}
+    }
 
     len = strlen(argv[2]);
     if (len % 16 != 0 || len > 1024) {
